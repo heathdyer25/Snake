@@ -62,6 +62,7 @@ public class GamePanel extends JPanel implements ActionListener {
 	 * @param g graphics to draw to.
 	 */
 	public void draw(Graphics g) {
+		snake.draw(g);
 		if (!running && !lost)  {
 			score.drawPlay(g);
 		} else if (!running && lost) {
@@ -69,7 +70,6 @@ public class GamePanel extends JPanel implements ActionListener {
 		} else {
 			apple.draw(g);
 		}
-		snake.draw(g);
 		score.draw(g);
 	}
 	
